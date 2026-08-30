@@ -119,16 +119,16 @@ function Lander() {
             <Progress value={Math.min(progress, 100)} className="h-2" />
           </div>
 
-          {step < 2 ? (
-            <section key={questions[step].id}>
-              <h2 className="text-xl font-bold text-foreground">{questions[step].title}</h2>
-              <p className="mt-1 text-sm text-muted-foreground">{questions[step].subtitle}</p>
+          {step < 2 && questions[step] ? (
+            <section key={questions[step]!.id}>
+              <h2 className="text-xl font-bold text-foreground">{questions[step]!.title}</h2>
+              <p className="mt-1 text-sm text-muted-foreground">{questions[step]!.subtitle}</p>
               <div className="mt-4 grid gap-3">
-                {questions[step].options.map((opt) => (
+                {questions[step]!.options.map((opt) => (
                   <button
                     key={opt}
                     type="button"
-                    onClick={() => answer(questions[step].id, opt)}
+                    onClick={() => answer(questions[step]!.id, opt)}
                     className="flex w-full items-center justify-between rounded-xl border-2 border-border bg-card px-4 py-4 text-left text-base font-semibold text-foreground transition-all active:scale-[0.99] hover:border-primary hover:bg-accent"
                   >
                     {opt}
