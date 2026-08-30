@@ -11,7 +11,7 @@ const OFFER_URL = "https://giftclick.org/aff_c?offer_id=1911&aff_id=173888";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Apply For Walmart $750 Today | 30-Second Clothing Savings Quiz" },
+      { title: "Apply For Walmart $750 Today | Grocery Savings Quiz" },
       {
         name: "description",
         content:
