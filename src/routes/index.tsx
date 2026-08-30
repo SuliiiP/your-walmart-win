@@ -11,17 +11,17 @@ const OFFER_URL = "https://giftclick.org/aff_c?offer_id=1911&aff_id=173888";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Apply For Walmart $750 Today | 30-Second Clothing Savings Quiz" },
+      { title: "Apply For Walmart $750 Today | Grocery Savings Quiz" },
       {
         name: "description",
         content:
-          "Answer 2 quick questions about how you shop for clothing and apply for the Walmart $750 shopping credit opportunity. US residents 18+. Participation required.",
+          "Answer 2 quick questions about how you shop for groceries and apply for the Walmart $750 shopping credit opportunity. US residents 18+. Participation required.",
       },
       { property: "og:title", content: "Apply For Walmart $750 Today" },
       {
         property: "og:description",
         content:
-          "Take the 30-second clothing savings quiz and apply for the Walmart $750 shopping credit opportunity. US only.",
+          "Take the quick grocery savings quiz and apply for the Walmart $750 shopping credit opportunity. US only.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -33,19 +33,19 @@ export const Route = createFileRoute("/")({
 const questions = [
   {
     id: "spend",
-    title: "How much do you usually spend on clothing each month?",
+    title: "How much do you usually spend on groceries each month?",
     subtitle: "This helps us match you with the right savings offers.",
-    options: ["Under $50", "$50 – $150", "$150 – $300", "More than $300"],
+    options: ["Under $200", "$200 – $500", "$500 – $800", "More than $800"],
   },
   {
     id: "shop",
     title: "What would you put a $750 Walmart shopping credit toward first?",
     subtitle: "Pick the one closest to what you need right now.",
     options: [
-      "Everyday clothing for myself",
-      "Kids' clothes & school outfits",
-      "Shoes, jackets & seasonal wear",
-      "A full wardrobe refresh",
+      "Weekly groceries & fresh produce",
+      "Bulk pantry staples & household items",
+      "Baby food, snacks & family essentials",
+      "A full month of grocery stock-up",
     ],
   },
 ];
@@ -88,9 +88,8 @@ function Lander() {
             Apply For Walmart $750 Today
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-primary-foreground/85">
-            Answer 2 quick questions about how you shop for clothing, then complete your
-            details to apply for the $750 Walmart shopping credit opportunity. Takes about
-            30 seconds.
+            Answer 2 quick questions about how you shop for groceries, then complete your
+            details to apply for the $750 Walmart shopping credit opportunity.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-3 text-xs font-medium text-primary-foreground/85">
@@ -101,7 +100,7 @@ function Lander() {
               <Truck className="size-4 text-secondary" /> Shop in-store or online
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="size-4 text-secondary" /> No purchase to start
+              <CheckCircle2 className="size-4 text-secondary" /> Quick application
             </span>
           </div>
         </div>
@@ -231,7 +230,7 @@ function Lander() {
           <h3 className="text-base font-bold text-foreground">How it works</h3>
           <ol className="mt-3 grid gap-3 text-sm text-muted-foreground">
             {[
-              "Answer 2 quick questions about your clothing budget.",
+              "Answer 2 quick questions about your grocery budget.",
               "Enter your basic details so your application can be reviewed.",
               "Complete the sponsor's steps on the next page to finish your entry.",
             ].map((t, i) => (
@@ -250,8 +249,8 @@ function Lander() {
           affiliated with, endorsed by, or sponsored by Walmart Inc. Completing this quiz
           and form does not guarantee that you will receive a shopping credit, reward, or
           any other item. Participation requirements, including completing sponsored
-          offers, must be met. Open to US residents 18 and over. Message and data rates may
-          apply.
+          offers, must be met. Open to US residents 18 and over. Message and data rates
+          may apply.
         </p>
       </main>
     </div>
